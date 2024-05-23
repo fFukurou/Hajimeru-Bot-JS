@@ -25,4 +25,15 @@ client.on('messageCreate', (message) => {
 
 });
 
+client.on('interactionCreate', (interaction) => {
+    if (interaction.isChatInputCommand()) {
+        if (interaction.commandName === 'hey') {
+            interaction.reply('hey');
+        }
+    }
+
+})
+
+
+
 client.login(process.env.TOKEN);
