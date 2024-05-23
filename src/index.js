@@ -27,8 +27,11 @@ client.on('messageCreate', (message) => {
 
 client.on('interactionCreate', (interaction) => {
     if (interaction.isChatInputCommand()) {
-        if (interaction.commandName === 'hey') {
-            interaction.reply('hey');
+        if (interaction.commandName === 'add') {
+            const num1 = interaction.options.get('first-number').value;
+            const num2 = interaction.options.get('second-number').value;
+/*             const num3 = interaction.options.get('third-number')?.value; */
+            interaction.reply(`The sum is ${num1 + num2}`);
         }
     }
 
