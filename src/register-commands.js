@@ -10,20 +10,6 @@ const commands = [
                 name: 'first-number',
                 description: 'the first number.',
                 type: ApplicationCommandOptionType.Number,
-/*                 choices: [
-                    {
-                        name: 'one',
-                        value: 1,
-                    },
-                    {
-                        name: 'two',
-                        value: 2,
-                    },
-                    {
-                        name: 'three',
-                        value: 3,
-                    },
-                ], */
                 required: true,
             },   
             {
@@ -36,9 +22,27 @@ const commands = [
                 name: 'third-number',
                 description: 'the third number.',
                 type: ApplicationCommandOptionType.Number,
+                choices: [
+                    {
+                        name: 'one',
+                        value: 1,
+                    },
+                    {
+                        name: 'two',
+                        value: 2,
+                    },
+                    {
+                        name: 'three',
+                        value: 3,
+                    },
+                ],
                 required: false,
             },  
         ],
+    },
+    {
+        name: 'embed',
+        description: 'Sends an embed.',
     },
 ];
 
